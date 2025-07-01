@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'recipes', 
     'ingredients',
     'categories',
-    'planer',
+    'planner',
     'shopping',
 
 ]
@@ -88,8 +88,12 @@ WSGI_APPLICATION = 'rezeptbuch.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'rezeptbuch',
+        'USER': 'Sascha',
+        'PASSWORD': 'akpowol22!',  # Hier dein Passwort eintragen
+        'HOST': 'localhost',
+        'PORT': '5435',
     }
 }
 
