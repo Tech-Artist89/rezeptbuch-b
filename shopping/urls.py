@@ -1,7 +1,12 @@
-from django.urls import path
-from . import views
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import ShoppingListViewSet, ShoppingListItemViewSet
+
+router = DefaultRouter()
+router.register(r'lists', ShoppingListViewSet, basename='shoppinglist')
+router.register(r'items', ShoppingListItemViewSet, basename='shoppinglistitem')
 
 app_name = 'shopping'
 urlpatterns = [
-    # Hier werden später die Shopping-Endpoints hinzugefügt
+    path('', include(router.urls)),
 ]
