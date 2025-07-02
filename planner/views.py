@@ -1,4 +1,5 @@
-from rest_framework import viewsets
+# planner/views.py - Saubere finale Version
+from rest_framework import viewsets, status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -21,6 +22,19 @@ class MealPlanViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
     
+    def create(self, request, *args, **kwargs):
+        """Override create to return full MealPlan data instead of create data"""
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        
+        # Erstelle das MealPlan Objekt
+        meal_plan = serializer.save(user=request.user)
+        
+        # Verwende den MealPlanSerializer für die Response (mit allen Daten)
+        response_serializer = MealPlanSerializer(meal_plan)
+        
+        return Response(response_serializer.data, status=status.HTTP_201_CREATED)
+    
     @action(detail=False, methods=['get'])
     def current_week(self, request):
         """Gibt die Meal Plans für die aktuelle Woche zurück"""
@@ -37,9 +51,7 @@ class MealPlanViewSet(viewsets.ModelViewSet):
     
     @action(detail=False, methods=['get'])
     def week(self, request):
-        """Gibt Meal Plans für eine spezifische Woche zurück
-        Query Parameter: start_date (YYYY-MM-DD)
-        """
+        """Gibt Meal Plans für eine spezifische Woche zurück"""
         start_date = request.query_params.get('start_date')
         if not start_date:
             return Response({'error': 'start_date parameter required'}, status=400)

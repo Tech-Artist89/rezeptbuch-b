@@ -148,3 +148,21 @@ CORS_ALLOW_CREDENTIALS = True
 
 # Erlaube alle Headers (für Entwicklung)
 CORS_ALLOW_ALL_HEADERS = True
+
+# rezeptbuch/settings.py - Am Ende hinzufügen
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'planner': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}
