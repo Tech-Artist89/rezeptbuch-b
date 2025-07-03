@@ -10,12 +10,12 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)vb2h^ptk5uu7a32k+x=&yjfi22dy-ov##)%5vkhzz)xb-y69w'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-)vb2h^ptk5uu7a32k+x=&yjfi22dy-ov##)%5vkhzz)xb-y69w')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() == 'true'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
 # Application definition
 INSTALLED_APPS = [
@@ -74,11 +74,11 @@ WSGI_APPLICATION = 'rezeptbuch.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rezeptbuch',
-        'USER': 'Sascha',
-        'PASSWORD': 'akpowol22!',
-        'HOST': 'localhost',
-        'PORT': '5435',
+        'NAME': os.environ.get('DB_NAME', 'rezeptbuch'),
+        'USER': os.environ.get('DB_USER', 'Sascha'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'akpowol22!'),
+        'HOST': os.environ.get('DB_HOST', 'localhost'),
+        'PORT': os.environ.get('DB_PORT', '5435'),
     }
 }
 

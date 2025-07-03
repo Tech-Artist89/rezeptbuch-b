@@ -1,0 +1,87 @@
+Watching for file changes with StatReloader
+Bad Request: /api/auth-token/
+[02/Jul/2025 22:23:44] "POST /api/auth-token/ HTTP/1.1" 400 68
+Bad Request: /api/auth-token/
+[02/Jul/2025 22:24:06] "POST /api/auth-token/ HTTP/1.1" 400 68
+[02/Jul/2025 22:24:40] "POST /api/auth-token/ HTTP/1.1" 200 52
+[02/Jul/2025 22:24:55] "GET /api/users/users/me/ HTTP/1.1" 200 132
+[02/Jul/2025 22:25:04] "GET /api/recipes/ HTTP/1.1" 200 52
+/home/saschaleptop/Dev/Rezeptbuch/rezeptbuch-b/rezeptbuch/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 02, 2025 - 22:20:08
+Django version 5.2.3, using settings 'rezeptbuch.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/saschaleptop/Dev/Rezeptbuch/rezeptbuch-b/rezeptbuch/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 02, 2025 - 22:25:29
+Django version 5.2.3, using settings 'rezeptbuch.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/saschaleptop/Dev/Rezeptbuch/rezeptbuch-b/rezeptbuch/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 02, 2025 - 22:25:34
+Django version 5.2.3, using settings 'rezeptbuch.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+[02/Jul/2025 22:27:39] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:27:39] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:27:41] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:27:41] "GET /api/ingredients/ HTTP/1.1" 200 52
+[02/Jul/2025 22:27:41] "GET /api/shopping/lists/ HTTP/1.1" 200 329
+[02/Jul/2025 22:27:53] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:27:53] "GET /api/ingredients/ HTTP/1.1" 200 52
+[02/Jul/2025 22:27:53] "GET /api/shopping/lists/ HTTP/1.1" 200 329
+[02/Jul/2025 22:28:09] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:28:10] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:28:16] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:28:16] "GET /api/ingredients/ HTTP/1.1" 200 52
+[02/Jul/2025 22:28:16] "GET /api/shopping/lists/ HTTP/1.1" 200 329
+[02/Jul/2025 22:28:26] "POST /api/shopping/lists/ HTTP/1.1" 201 90
+[02/Jul/2025 22:28:26] "POST /api/shopping/lists/ HTTP/1.1" 201 90
+[02/Jul/2025 22:37:08] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:37:08] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:37:11] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:37:11] "GET /api/ingredients/ HTTP/1.1" 200 52
+[02/Jul/2025 22:37:11] "GET /api/shopping/lists/ HTTP/1.1" 200 885
+[02/Jul/2025 22:37:29] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:37:29] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:37:31] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:37:31] "GET /api/recipes/ HTTP/1.1" 200 52
+[02/Jul/2025 22:37:31] "GET /api/planner/current_week/ HTTP/1.1" 200 2
+[02/Jul/2025 22:37:42] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:37:42] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:37:44] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:37:44] "GET /api/ingredients/ HTTP/1.1" 200 52
+[02/Jul/2025 22:37:44] "GET /api/shopping/lists/ HTTP/1.1" 200 885
+[02/Jul/2025 22:37:46] "POST /api/shopping/lists/ HTTP/1.1" 201 90
+[02/Jul/2025 22:37:55] "OPTIONS /api/shopping/lists/undefined/ HTTP/1.1" 200 0
+Not Found: /api/shopping/lists/undefined/
+[02/Jul/2025 22:37:55] "PATCH /api/shopping/lists/undefined/ HTTP/1.1" 404 28
+[02/Jul/2025 22:38:02] "OPTIONS /api/shopping/lists/undefined/generate_from_meal_plans/ HTTP/1.1" 200 0
+Not Found: /api/shopping/lists/undefined/generate_from_meal_plans/
+[02/Jul/2025 22:38:02] "POST /api/shopping/lists/undefined/generate_from_meal_plans/ HTTP/1.1" 404 28
+[02/Jul/2025 22:38:28] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:38:28] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:38:32] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:38:32] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:38:34] "GET /api/users/users/me/ HTTP/1.1" 200 145
+[02/Jul/2025 22:38:34] "GET /api/users/users/me/ HTTP/1.1" 200 145
